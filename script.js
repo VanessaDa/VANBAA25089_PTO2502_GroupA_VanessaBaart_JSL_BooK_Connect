@@ -1,7 +1,9 @@
-var a = 5;
-let b = 7;
-const c = 8;
+let a = 5;
 
-a = 3;
-b = 8;
-c = 5;
+const c = 8;
+{
+    let a = 9;
+    console.log(a);
+}
+
+console.log(a);
