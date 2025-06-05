@@ -1,8 +1,9 @@
-let a = 5;
+var a = 5;
+let b = 7;
 
 const c = 8;
 {
-    let a = 9;
+    var a = 9;
     console.log(a);
 }
 
