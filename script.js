@@ -1,4 +1,7 @@
-const a = 5;
-const b = 7;
-console.log(a + b);
-console.log("Hello, World!");
+var a = 5;
+let b = 7;
+const c = 8;
+
+a = 3;
+b = 8;
+c = 5;
