@@ -1,10 +1,22 @@
-var a = 5;
-let b = 7;
+//Comparison operators
 
-const c = 8;
-{
-    var a = 9;
-    console.log(a);
-}
+5 == 5 // true
+5 === '5' // false
+5 > 6 // false
+5 < 6 // true
+5 >= 5 // true
+5 <= 6 // true
 
-console.log(a);
+console.log(5 == 5);
+console.log(5 === "5");
+console.log(5 > 6);
+console.log(5 < 6);
+console.log(5 >= 5);
+console.log(5 <= 6);
+
+//Logical operators
+
+const a = true;
+const b = true;
+
+console.log(a && b);
