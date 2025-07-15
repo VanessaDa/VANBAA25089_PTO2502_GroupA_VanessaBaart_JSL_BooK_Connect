@@ -47,3 +47,12 @@ else {
 
 //More conditional statements
 let x = "first";
+if(x === "third"){
+    console.log("this line ran")
+}
+else if (x === "second") {
+    console.log("this line ran")
+}
+else if (x === "first") {
+    console.log("this line ran") // 'this line ran'
+}
