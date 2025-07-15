@@ -170,3 +170,46 @@ const jobHours = {
 
 const { office, fisherman, DeptofHomeAffairs } = jobHours;
 console.log(DeptofHomeAffairs); // '10am-4pm'
+
+// Functions
+function getUniqueId() {
+  return new Date().now(); // ❗ Should be: Date.now()
+}
+
+const createSchedule = (creator, workHours, leisureHours) => {
+  return {
+    id: getUniqueId(),
+    creator: creator,
+    workHours: workHours,
+    leisureHours: updateLeisureHours(leisureHours),
+  };
+};
+
+// Methods
+function updateLeisureHours(leisureHours) {
+  const newHours = "10pm";
+  const updatedHours = leisureHours.slice(0, -4) + newHours;
+  return updatedHours;
+}
+
+updateLeisureHours("8pm-10am");
+
+console.log(newSchedule);
+// Example output: { id: 1744281592903, creator: 'Che', workHours: '9am-5pm', leisureHours: '5pm - 10pm' }
+
+// Methods
+function updateLeisureHours(leisureHours) {
+  const newHours = "10pm";
+  const updatedHours = leisureHours.slice(0, -4) + newHours;
+  return updatedHours;
+}
+
+updateLeisureHours("8pm-10am");
+
+// Prototypes
+String.prototype.replaceFrom = function (index, replacement) {
+  return this.substring(0, index) + replacement;
+};
+let leisureHours = "5pm - 12pm";
+const newLeisureHours = leisureHours.replaceFrom(leisureHours.length - 4, "10pm");
+console.log(newLeisureHours); // '5pm - 10pm'
