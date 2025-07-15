@@ -56,3 +56,29 @@ else if (x === "second") {
 else if (x === "first") {
     console.log("this line ran") // 'this line ran'
 }
+//Ternary Operator - A shorthand if statement
+const k = 10;
+const y = 7;
+let first = (y < k) ? y : k;
+console.log(first) // 7
+
+//The components:
+// (y < k) - The Expression
+// '?' - The ternary operator - following is the true condition result, 'y'
+// ':' - following this symbol is the false condition result, 'k'
+
+let page = "home"
+switch(page){
+    case "home": {
+        console.log("homepage") // 'homepage'
+        break
+    }
+    case "about": {
+        console.log("aboutpage")
+        break
+    }
+    case "contact": {
+        console.log("contactpage")
+        break
+    }
+}
