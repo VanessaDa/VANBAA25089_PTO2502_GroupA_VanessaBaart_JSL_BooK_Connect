@@ -82,3 +82,30 @@ switch(page){
         break
     }
 }
+/Loops
+
+for(let x=0; x < 5; x++){
+    console.log("") // '', '', '', '', ''
+}
+
+// while(true){
+//   console.log("Infinite Loop")
+// }
+
+let q = 0
+while(q < 5){
+    console.log("While Loop") // 'While Loop', 'While Loop', 'While Loop', 'While Loop', 'While Loop'
+    q++
+}
+
+let h = 10
+do {
+    console.log("Always runs once") // 'Always runs once'
+} while(h > 20)
+
+//Break statement
+for(let x=0;x<1000;x++){
+    if(x === 5){
+        break;
+    }
+}
