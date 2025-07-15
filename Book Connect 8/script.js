@@ -79,3 +79,50 @@ let obj = {
 console.log(obj["key1"]); // 'value1'
 console.log(obj.key1);    // 'value1'
 
+// Accessing object values
+console.log(obj["key1"]); // 'value1'
+console.log(obj.newObj);  // { subKey1: 'subValue1' }
+
+// Accessing all keys
+console.log(Object.keys(obj)); 
+// ['key1', 'key2', 'string', 'key4', 'newArr', 'newObj']
+
+// Accessing all values
+console.log(Object.values(obj)); 
+// ['value1', 'value2', 'value3', 100, [1, 2], { subKey1: 'subValue1' }]
+
+import { authors, genres, books } from "../data.mjs";
+
+// Bringing it together to access elements from bookConnect data
+const bookConnectData = [authors, genres, books];
+console.log(bookConnectData);
+
+// Now we want to access all the author names in the dataset.
+// First we need to access the 'authors' object.
+let authorsObject = bookConnectData[0]; // gives us the authors object from the array
+
+// Next we want all of the names which are values in the object
+let values = Object.values(authorsObject);
+console.log(values);
+
+// Copying arrays and objects
+// Arrays and objects are stored differently to simple datatypes like strings and numbers.
+
+// Strings and numbers are stored as values
+const x = 5;
+const y = 5;
+console.log(x === y); // true
+
+// Arrays and objects are stored as references
+const arr1 = [1, 2];
+const arr2 = [1, 2];
+console.log(arr1 === arr2); // false
+
+const arr3 = arr1;
+arr3.push("hello");
+console.log(arr1); // [1, 2, 'hello']
+
+// How to copy arr1?
+const arr4 = [...arr1];
+arr4.push("goodbye");
+console.log(arr1); // [1, 2, 'hello']
