@@ -41,3 +41,18 @@ console.log(multiArr.flat()); // [1, 2, 3, 4, 5, 6]
 
 // Slice array to get part
 console.log(arr4.slice(4)); // Sliced from the 5th element
+// Looping through arrays
+let arr = [1, 2, 3, 4];
+
+// forEach method
+arr.forEach((element) => {
+  console.log(element); // 1, 2, 3, 4
+});
+
+// map method also runs 1 time for each element but also returns a
+// new array with values mapped from the original array
+const newArray = arr.map((element) => {
+  return element + 5;
+});
+
+console.log(newArray); // [6, 7, 8, 9]
