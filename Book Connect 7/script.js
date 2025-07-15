@@ -2,7 +2,7 @@
 let count = 5; //let count = is a statement which is used to define
                //a variable named 'count' while '5' is an expression
 
-//Examples of expressions
+//Examples of expression
 5 * 5;
 5 < 15;
 false;
