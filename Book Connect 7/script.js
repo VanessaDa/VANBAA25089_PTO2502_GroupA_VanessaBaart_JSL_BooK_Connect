@@ -109,3 +109,11 @@ for(let x=0;x<1000;x++){
         break;
     }
 }
+
+//Continue statement
+for(let x=0; x<10; x++){
+    if(x === 5){
+        continue;
+    }
+    console.log(x) // 0, 1, 2, 3, 4, 6, 7, 8, 9
+}
