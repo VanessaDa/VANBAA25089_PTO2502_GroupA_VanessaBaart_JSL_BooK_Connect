@@ -56,3 +56,26 @@ const newArray = arr.map((element) => {
 });
 
 console.log(newArray); // [6, 7, 8, 9]
+
+// Accessing array members – Remember arrays are zero indexed
+console.log(arr[0]); // 1
+console.log(arr[4]); // undefined
+console.log(arr[5]); // undefined
+
+// Objects are also compound data types but instead of storing only values
+// They store key-value pairs
+let obj = {
+  key1: "value1",
+  key2: "value2",
+  key3: "value3",
+  key4: 100,
+  key5: [1, 2],
+  key6: {
+    subKey1: "subValue1",
+  },
+};
+
+// Accessing object values
+console.log(obj["key1"]); // 'value1'
+console.log(obj.key1);    // 'value1'
+
