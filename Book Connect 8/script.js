@@ -126,3 +126,47 @@ console.log(arr1); // [1, 2, 'hello']
 const arr4 = [...arr1];
 arr4.push("goodbye");
 console.log(arr1); // [1, 2, 'hello']
+
+// Multi-dimensional Arrays
+const multiArray = [1, 2, 3, [1, 2, 3]];
+const arr5 = multiArray;
+arr5[3].push("hello");
+console.log(multiArray); // [1, 2, 3, [1, 2, 3, 'hello']]
+
+const arr6 = [...multiArray];
+arr6[3].push("goodbye");
+console.log(multiArray); // [1, 2, 3, [1, 2, 3, 'hello', 'goodbye']]
+
+// How to do a deep copy then?
+const clone = JSON.parse(JSON.stringify(multiArray));
+clone[3].push("GoodAfternoon");
+console.log(multiArray); // remains unaffected
+
+// Other ways:
+// Reliable cloning using a library
+// Since cloning objects is not trivial (complex types, circular references, functions etc.),
+// most major libraries provide functions to clone objects.
+// Don't reinvent the wheel - if you're already using a library,
+// check if it has an object cloning function. For example:
+
+// lodash - cloneDeep; can be imported separately via the lodash.clonedeep module
+// Ramda - clone
+// AngularJS - angular.copy
+// jQuery - jQuery.extend(true, {}, oldObject); .clone() only clones DOM elements
+
+// Destructuring
+
+// Arrays
+const people = ["Jeff", "Geoff", "Djef"];
+const [person25, person2, person3] = people;
+console.log(person25); // 'Jeff'
+
+// Objects
+const jobHours = {
+  office: "9am-5pm",
+  fisherman: "5am-9pm",
+  DeptofHomeAffairs: "10am-4pm",
+};
+
+const { office, fisherman, DeptofHomeAffairs } = jobHours;
+console.log(DeptofHomeAffairs); // '10am-4pm'
