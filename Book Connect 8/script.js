@@ -28,3 +28,16 @@ console.log(arr3); // [1, 2, 3, 4, 5, 6]
 const arr4 = arr.concat(arr2, arr3);
 console.log(arr4); // [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6]
 }
+// Get the length of an array
+console.log(arr3.length); // 6
+
+// Flatten array
+const multiArr = [
+  [1, 2],
+  [3, 4],
+  [5, 6],
+];
+console.log(multiArr.flat()); // [1, 2, 3, 4, 5, 6]
+
+// Slice array to get part
+console.log(arr4.slice(4)); // Sliced from the 5th element
