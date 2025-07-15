@@ -37,8 +37,8 @@ console.log("5" > "6");      // false
 console.log("5" < "6");      // true
 
 //Conditional Logic Continued
-let y = 5;
-if(y > 6){
+let y1 = 5;
+if(y1 > 6){
     //Do something
 }
 else {
@@ -82,7 +82,7 @@ switch(page){
         break
     }
 }
-/Loops
+//Loops
 
 for(let x=0; x < 5; x++){
     console.log("") // '', '', '', '', ''
